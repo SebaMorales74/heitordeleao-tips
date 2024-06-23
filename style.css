@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #202124;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.logo {
+    max-height: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+.navigation {
+    background-color: #303134;
+    padding: 1rem;
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+.navigation li {
+    padding: .5rem;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navigation li:hover {
+    color: rgba(255, 255, 255, 0.675);
+}
+
+.gallery {
+    width: 100%;
+    background-color: #303134;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.gallery img {
+    margin: 1rem;
+}
+
+.thumbnail {
+    max-width: 60%;
+    border: white 3px solid;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > h1 {
+    width: 100%;
+    text-align: center;
+    background-color: #303134;
+}
+
+main > hr {
+    width: 100%;
+    border: 1px solid white;
+}
+
+article {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    max-width: 1024px;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    border-top: 1px solid white;
+    background-color: black;
+    color: #b0b0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    body header {
+        flex-direction: row;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
